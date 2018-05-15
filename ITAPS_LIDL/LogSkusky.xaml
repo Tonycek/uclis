@@ -1,0 +1,40 @@
+﻿<Window x:Class="ITAPS_LIDL.LogSkusky"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ITAPS_LIDL"
+        mc:Ignorable="d"
+        Title="Tabulka Log Skusky" Height="712.953" Width="1146.471" Loaded="Window_Loaded"
+        SizeToContent="Width"
+        ResizeMode="CanMinimize">
+    <Grid>
+        <DataGrid Name="datagrid" Margin="0,72,0,40" Height="auto" MouseDoubleClick="datagrid_MouseDoubleClick" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Platny do" IsReadOnly="True" MinWidth="140" Binding="{Binding Path=PlatnyDo}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Datum planovanej skusky" IsReadOnly="True"  MinWidth="140" Binding="{Binding Path=DatumSkusky}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Institucia" IsReadOnly="True" MinWidth="120" Binding="{Binding Path=Institucia}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Note" IsReadOnly="True"  MinWidth="150" Binding="{Binding Path=Note}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <ComboBox Name="choosePageCombobox" SelectedValuePath="Content" Margin="270,29,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120" SelectionChanged="choosePageCombobox_SelectionChanged">
+            <ComboBoxItem Content="Tabulka Uvery"/>
+            <ComboBoxItem Content="Log Skusky"/>
+            <ComboBoxItem Content="Log Skolenia"/>
+        </ComboBox>
+        <Label Content="Choose page" HorizontalAlignment="Left" Margin="186,25,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.563,0.462"/>
+        <Label Content="Log Off" Margin="0,25,10,0" VerticalAlignment="Top" Foreground="Blue" MouseLeftButtonDown="Label_MouseLeftButtonDown" RenderTransformOrigin="5.28,0.962" HorizontalAlignment="Right" Width="50">
+            <Label.Style>
+                <Style TargetType="Label">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Cursor" Value="Hand"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Label.Style>
+        </Label>
+        
+    </Grid>
+</Window>

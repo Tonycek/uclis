@@ -1,0 +1,13 @@
+﻿<Window x:Class="ITAPS_LIDL.Introduction"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ITAPS_LIDL"
+        mc:Ignorable="d"
+        Title="Result" Height="219.849" Width="255.905" Closed="Window_Closed">
+    <Grid>
+        <Label Background="Green" Content="Prihlásenie úspešné..." HorizontalAlignment="Left" Margin="0,43,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" Height="101" Width="248" VerticalContentAlignment="Center"/>
+
+    </Grid>
+</Window>

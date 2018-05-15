@@ -1,0 +1,49 @@
+﻿<Window x:Class="ITAPS_LIDL.EditUser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ITAPS_LIDL"
+        mc:Ignorable="d"
+        Title="Edit User" Height="366" Width="443.074" Loaded="Window_Loaded"
+        ResizeMode="CanMinimize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Spolocnost" HorizontalAlignment="Left" Margin="21,47,0,0" VerticalAlignment="Top" Width="71"/>
+        <Label Content="Meno" HorizontalAlignment="Left" Margin="21,75,0,0" VerticalAlignment="Top" Width="42"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="217,78,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="189"/>
+        <Button Content="Return" HorizontalAlignment="Left" Margin="10,0,0,10" MinWidth="77" MinHeight="20" Height="20" VerticalAlignment="Bottom"/>
+        <Label Content="Kategoria" HorizontalAlignment="Left" Margin="21,103,0,0" VerticalAlignment="Top" Width="62"/>
+        <Label Content="Skolenia" HorizontalAlignment="Left" Margin="21,134,0,0" VerticalAlignment="Top" Width="55"/>
+        <Label Content="Datum posledneho skolenia" HorizontalAlignment="Left" Margin="21,161,0,0" VerticalAlignment="Top" Width="162"/>
+        <Label Content="Datum poslednej skusky" HorizontalAlignment="Left" Margin="21,189,0,0" VerticalAlignment="Top" Width="141"/>
+        <Label Content="Email" HorizontalAlignment="Left" Margin="21,217,0,0" VerticalAlignment="Top" Width="39"/>
+        <Label Content="Pocet hodin" HorizontalAlignment="Left" Margin="21,245,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="217,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="189"/>
+        <CheckBox Content="Skolenie" HorizontalAlignment="Left" Margin="217,140,0,0" VerticalAlignment="Top" Width="67"/>
+        <CheckBox Content="Skuska" HorizontalAlignment="Left" Margin="293,140,0,0" VerticalAlignment="Top" Width="57"/>
+        <DatePicker HorizontalAlignment="Left" Margin="217,162,0,0" VerticalAlignment="Top" Width="105"/>
+        <DatePicker IsEnabled="False" HorizontalAlignment="Left" Margin="217,191,0,0" VerticalAlignment="Top" Width="105"/>
+        <ComboBox HorizontalAlignment="Left" Margin="217,107,0,0" VerticalAlignment="Top" Width="189">
+            <ComboBoxItem Content="zakladny"/>
+            <ComboBoxItem Content="stredny"/>
+            <ComboBoxItem Content="vyssi"/>
+        </ComboBox>
+        <Label Content="Log Off" Margin="0,10,10,0" VerticalAlignment="Top" Foreground="Blue" MouseLeftButtonDown="Label_MouseLeftButtonDown" RenderTransformOrigin="5.28,0.962" HorizontalAlignment="Right" Width="51">
+            <Label.Style>
+                <Style TargetType="Label">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Cursor" Value="Hand"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Label.Style>
+        </Label>
+        <Button Content="Apply" Margin="0,0,10,10" HorizontalAlignment="Right" Width="77" MinHeight="20" Height="20" VerticalAlignment="Bottom"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="217,248,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="189"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="217,220,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="189"/>
+    </Grid>
+</Window>
